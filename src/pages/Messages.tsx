@@ -5,6 +5,7 @@ import { useQuery, useMutation, useQueryClient } from "@tanstack/react-query";
 import AppLayout from "@/components/AppLayout";
 import { supabase } from "@/integrations/supabase/client";
 import { useAuth } from "@/hooks/useAuth";
+import { Button } from "@/components/ui/button";
 
 const Messages = () => {
   const { user } = useAuth();
@@ -88,8 +89,8 @@ const Messages = () => {
   });
 
   const filteredClients = clients.filter((c: any) =>
-    !search || 
-    c.name.toLowerCase().includes(search.toLowerCase()) || 
+    !search ||
+    c.name.toLowerCase().includes(search.toLowerCase()) ||
     (c.company && c.company.toLowerCase().includes(search.toLowerCase()))
   );
 
@@ -130,11 +131,10 @@ const Messages = () => {
                 <button
                   key={client.id}
                   onClick={() => setActiveClientId(client.id)}
-                  className={`w-full text-left p-4 border-b border-border/30 transition-all flex items-center gap-3 ${
-                    activeClientId === client.id 
-                      ? "bg-primary/10 border-l-2 border-l-primary" 
+                  className={`w-full text-left p-4 border-b border-border/30 transition-all flex items-center gap-3 ${activeClientId === client.id
+                      ? "bg-primary/10 border-l-2 border-l-primary"
                       : "hover:bg-secondary/50 border-l-2 border-l-transparent"
-                  }`}
+                    }`}
                 >
                   <div className={`w-10 h-10 rounded-full flex items-center justify-center font-heading font-bold overflow-hidden border-2 ${activeClientId === client.id ? 'bg-primary/20 border-primary/40 text-primary' : 'bg-secondary border-border text-muted-foreground'}`}>
                     {(client.name?.[0] || '?').toUpperCase()}
@@ -187,11 +187,10 @@ const Messages = () => {
                         className={`flex ${isAgency ? "justify-end" : "justify-start"}`}
                       >
                         <div className={`flex flex-col max-w-[75%] ${isAgency ? 'items-end' : 'items-start'}`}>
-                          <div className={`rounded-2xl px-5 py-3 shadow-sm ${
-                            isAgency
+                          <div className={`rounded-2xl px-5 py-3 shadow-sm ${isAgency
                               ? "bg-primary text-primary-foreground rounded-br-none"
                               : "bg-secondary text-foreground rounded-bl-none border border-border/50"
-                          }`}>
+                            }`}>
                             <p className="text-sm leading-relaxed whitespace-pre-wrap">{msg.content}</p>
                           </div>
                           <span className="text-[10px] text-muted-foreground mt-1.5 font-medium px-1">
