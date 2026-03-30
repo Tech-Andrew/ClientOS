@@ -19,6 +19,7 @@ import NotFound from "@/shared/components/NotFound";
 import Settings from "@/features/settings/Settings";
 
 import { ThemeProvider } from "next-themes";
+import { SpeedInsights } from "@vercel/speed-insights/react";
 
 const queryClient = new QueryClient();
 
@@ -45,6 +46,7 @@ const App = () => (
             <Route path="*" element={<NotFound />} />
           </Routes>
         </BrowserRouter>
+        <SpeedInsights />
       </TooltipProvider>
       </AuthProvider>
     </ThemeProvider>

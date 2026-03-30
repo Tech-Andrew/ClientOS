@@ -5,7 +5,7 @@ import { componentTagger } from "lovable-tagger";
 
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => ({
-  root: "../",
+  root: path.resolve(__dirname, ".."),
   publicDir: "public",
   envDir: "./",
   server: {
