@@ -1,0 +1,45 @@
+{
+  "meta": {
+    "brand_name": "ClientFlow OS",
+    "description": "Strict core design tokens for ClientFlow OS UI implementation."
+  },
+  "colors": {
+    "background": "#030B1E",
+    "primary": "#2B63EB",
+    "accent": "#22D0EE",
+    "panel": "#0F172A",
+    "border": "#1E293B",
+    "text": {
+      "primary": "#F8FAFC",
+      "secondary": "#94A3B8"
+    },
+    "system": {
+      "success": "#10B983",
+      "error": "#F54444",
+      "warning": "#F59E05",
+      "info": "#3B82E6"
+    },
+    "gradient": "linear-gradient(135deg, #2B63EB 0%, #22D0EE 100%)"
+  },
+  "typography": {
+    "font_family": "Inter, -apple-system, system-ui, sans-serif",
+    "scale": {
+      "h1": { "size": "32px", "weight": "700" },
+      "h2": { "size": "24px", "weight": "600" },
+      "h3": { "size": "18px", "weight": "500" },
+      "body": { "size": "14px", "weight": "400" },
+      "caption": { "size": "12px", "weight": "500" }
+    },
+    "tracking": "tight"
+  },
+  "ui": {
+    "border_radius": {
+      "button": "10px",
+      "card": "12px",
+      "input": "8px"
+    },
+    "spacing_unit": "8px",
+    "shadow_max_opacity": "0.1"
+  }
+}
+

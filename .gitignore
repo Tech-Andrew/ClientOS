@@ -22,3 +22,21 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Project specific
+.env
+.env.*
+!.env.example
+.gemini/
+build/
+.next/
+out/
+.vercel
+node_modules/
+dist/
+
+# Firebase
+*-key.json
+
+# Local history
+.history/

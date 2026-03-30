@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --font-heading: 'Plus Jakarta Sans', -apple-system, sans-serif;
+    --font-body: 'Plus Jakarta Sans', -apple-system, sans-serif;
+
+    /* Elite Brand System */
+    --background: 240 80% 6%;      /* #03031B - Midnight Black */
+    --foreground: 210 40% 98%;     /* #F8FAFC */
+
+    --card: 224 82% 6%;            /* #030B1E - Deep Panel */
+    --card-foreground: 210 40% 98%;
+
+    --popover: 224 82% 6%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 224 82% 54%;        /* #2B63EB - Electric Blue */
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 217 33% 17%;      /* #20293C - Subtle Gray */
+    --secondary-foreground: 215 20% 65%;
+
+    --muted: 217 33% 13%;
+    --muted-foreground: 215 20% 50%;
+
+    --accent: 188 86% 53%;         /* #22D0EE - Cyan Accent */
+    --accent-foreground: 240 80% 6%;
+
+    --destructive: 0 84% 60%;      /* #EF4444 */
+    --destructive-foreground: 0 0% 100%;
+
+    --success: 158 84% 39%;        /* #10B983 */
+    --success-foreground: 0 0% 100%;
+
+    --warning: 38 92% 50%;         /* #F59E0B */
+    --warning-foreground: 0 0% 100%;
+
+    --border: 217 33% 17%;
+    --input: 217 33% 17%;
+    --ring: 224 82% 54%;
+
+    --radius: 16px;
+    --radius-button: 12px;
+
+    --sidebar-background: 240 80% 4%; /* Slightly darker for depth */
+    --sidebar-foreground: 215 20% 65%;
+    --sidebar-primary: 224 82% 54%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 224 82% 8%;
+    --sidebar-accent-foreground: 210 40% 98%;
+    --sidebar-border: 217 33% 12%;
+    --sidebar-ring: 224 82% 54%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+    letter-spacing: -0.02em; /* Geometric font benefit */
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: var(--font-body);
+    font-variant-ligatures: none;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
+    @apply font-extrabold tracking-tighter;
+  }
+}
+
+@layer utilities {
+  .panel-card {
+    @apply relative overflow-hidden bg-[#030B1E] border border-[#1E293B]/50 rounded-[24px] p-6 shadow-2xl shadow-black/20;
+    backdrop-filter: blur(20px);
+  }
+
+  .panel-card::before {
+    content: '';
+    @apply absolute top-0 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-[#2B63EB]/20 to-transparent;
+  }
+
+  .glass-pill {
+    @apply bg-white/5 border border-white/10 backdrop-blur-md rounded-full px-4 py-1.5 text-[12px] font-bold text-[#F8FAFC];
+  }
+
+  .btn-primary {
+    @apply bg-[#2B63EB] text-[#F8FAFC] font-bold px-5 py-2.5 rounded-[12px] transition-all relative overflow-hidden shadow-lg shadow-[#2B63EB]/20 border border-[#2B63EB]/30;
+  }
+
+  .btn-primary:hover {
+    @apply bg-[#1E40AF] scale-[1.02] shadow-[#2B63EB]/40;
+  }
+
+  .brand-gradient {
+    background: linear-gradient(135deg, #2B63EB 0%, #22D0EE 100%);
+  }
+
+  .text-brand-gradient {
+    background: linear-gradient(135deg, #2B63EB 0%, #22D0EE 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+  
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+}
+

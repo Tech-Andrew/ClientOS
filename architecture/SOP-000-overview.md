@@ -8,7 +8,7 @@
 
 ## System Overview
 
-ClientOS is a client management OS for freelancers and agencies. It provides a unified dashboard for managing clients, projects, tasks, invoices, approvals, and messaging.
+ClientFlow is a client management OS for freelancers and agencies. It provides a unified dashboard for managing clients, projects, tasks, invoices, approvals, and messaging.
 
 ---
 
