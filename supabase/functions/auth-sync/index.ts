@@ -1,4 +1,3 @@
-// @ts-nocheck
 import { serve } from "https://deno.land/std@0.168.0/http/server.ts";
 import { createClient } from "https://esm.sh/@supabase/supabase-js@2.39.7";
 import * as jose from "https://esm.sh/jose@5.2.3";
@@ -53,7 +52,7 @@ serve(async (req) => {
     console.log(`[AuthSync] Identity Verified Successfully: ${email} (UID: ${firebaseUid})`);
 
     // 3. Resolve identity in Supabase Auth
-    let { data: existingUser } = await supabaseAdmin.auth.admin.getUserByEmail(email);
+    const { data: existingUser } = await supabaseAdmin.auth.admin.getUserByEmail(email);
     let supabaseUserId;
 
     if (!existingUser?.user) {
