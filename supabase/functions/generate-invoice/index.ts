@@ -1,4 +1,3 @@
-// @ts-nocheck
 import "https://esm.sh/@supabase/functions-js@2.4.2/src/edge-runtime.d.ts";
 import { PDFDocument, rgb, StandardFonts } from "https://esm.sh/pdf-lib@1.17.1";
 

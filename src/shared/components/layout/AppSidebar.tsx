@@ -146,6 +146,7 @@ const AppSidebar = () => {
 
 export default AppSidebar;
 
+// eslint-disable-next-line react-refresh/only-export-components
 export const useSidebarWidth = () => {
   // This is a simple approach — for collapsed state to propagate,
   // we'd need context. For now, default to full width.
